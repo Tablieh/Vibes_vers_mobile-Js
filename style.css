@@ -322,7 +322,7 @@ width: 400px;
 }
 #big_text{
     height: 150px;
-    width: 260px;
+  
 }
 .botton{
     color: white;
@@ -411,6 +411,7 @@ form{
 #allimg{
     margin: 1em;
 }
+
 /* pour les ecran jusqua une largeur de 800px */
 @media screen and (max-width:800px){
     #burger{
@@ -441,9 +442,6 @@ form{
     nav{
         
         margin-left: 0em;
-    }
-    #flex_img{
-        display: none;
     }
     .newhorizon p{
         padding-top: 0em;

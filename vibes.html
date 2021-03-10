@@ -81,21 +81,21 @@
                     
                 </div>
                 <section id="flex_img">
-                    <div><img src="img/img_1.jpg" alt=""></div>
-                    <div><img src="img/img_2.jpg" alt=""></div>
-                    <div><img src="img/img_3.jpg" alt=""></div>
-                    <div><img src="img/img_4.jpg" alt=""></div>
-                    <div><img src="img/img_5.jpg" alt=""></div>
-                    <div><img src="img/img_6.jpg" alt=""></div>
-                    <div><img src="img/img_7.jpg" alt=""></div>
-                    <div><img src="img/img_8.jpg" alt=""></div>
+                    <div class="audio" ><img src="img/img_1.jpg" alt=""></div>
+                    <div class="image" ><img src="img/img_2.jpg" alt=""></div>
+                    <div class="vedio" ><img src="img/img_3.jpg" alt=""></div>
+                    <div class="image" ><img src="img/img_4.jpg" alt=""></div>
+                    <div class="audio" ><img src="img/img_5.jpg" alt=""></div>
+                    <div class="vedio" ><img src="img/img_6.jpg" alt=""></div>
+                    <div class="audio" ><img src="img/img_7.jpg" alt=""></div>
+                    <div class="vedio" ><img src="img/img_8.jpg" alt=""></div>
 
                 </section>
                 <nav id="allimg">
-                    <a href="">ALL</a>
-                    <a href="">AUDIO</a>
-                    <a href="">IMAGE</a>
-                    <a href="">VIDEO</a>
+                    <a class="btn_all" href="">ALL</a>
+                    <a class="btn_audio" href="">AUDIO</a>
+                    <a class="btn_image"href="">IMAGE</a>
+                    <a class="btn_vedio"href="">VEDIO</a>
                     <a class="loadmore" href="">LOAD MORE <i class="fab fa-phoenix-squadron fa-1x"></i></a>
 
                 </nav>
@@ -235,7 +235,56 @@
             }
         })
     }
-
+    let audio = document.querySelector(".btn_audio")
+    audio.addEventListener("click", function(event){
+        event.preventDefault()
+        let images = document.querySelectorAll("#flex_img div")
+        for (const image of images) {
+            if(!image.classList.contains("audio")){
+               image.style.display="none"
+               
+                
+            }
+            else{
+                image.style.display="block"
+            }
+        }
+    })
+    let vedio = document.querySelector(".btn_vedio")
+    vedio.addEventListener("click", function(event){
+        event.preventDefault()
+        let images = document.querySelectorAll("#flex_img div")
+        for (const image of images) {
+            if(!image.classList.contains("vedio")){
+               image.style.display="none"   
+            }
+            else{
+                image.style.display="block"
+            }
+        }
+    })
+    let imagelink = document.querySelector(".btn_image")
+    imagelink.addEventListener("click", function(event){
+        event.preventDefault()
+        let images = document.querySelectorAll("#flex_img div")
+        for (const image of images) {
+            if(!image.classList.contains("image")){
+               image.style.display="none"   
+            }
+            else{
+                image.style.display="block"
+            }
+        }
+    })
+    let all = document.querySelector(".btn_all")
+    all.addEventListener("click", function(event){
+        event.preventDefault()
+        let images = document.querySelectorAll("#flex_img div")
+        for (const image of images) {
+            image.style.display="block"
+        }
+    })
+    
 </script>
 </body>
     
